@@ -32,10 +32,10 @@ qiime demux summarize   --i-data [author name]-paired-end-demux.qza   --o-visual
 # generate dada2 files
 qiime dada2 denoise-paired   --i-demultiplexed-seqs [author name]-paired-end-demux.qza   --p-trunc-len-f 150   --p-trunc-len-r 150   --p-trim-left-f 0   --p-trim-left-r 0   --o-representative-sequences rep-seqs.qza   --o-table table.qza   --o-denoising-stats stats.qza
 
-# generate stats
+# generate stat visualization
 qiime metadata tabulate   --m-input-file stats.qza   --o-visualization [author name]-stats.qzv
 
-# generate visualizations
+# generate additional visualizations
 qiime feature-table summarize \
   --i-table table.qza \
   --o-visualization [author name]-table.qzv \

@@ -37,10 +37,10 @@ qiime dada2 denoise-single \
 --o-table table.qza \
 --o-denoising-stats stats.qza
 
-# generate stats
+# generate stat visualization
 qiime metadata tabulate   --m-input-file stats.qza   --o-visualization [author name]-stats.qzv
 
-# generate visualizations
+# generate additional visualizations
 qiime feature-table summarize \
   --i-table table.qza \
   --o-visualization [author name]-table.qzv \
